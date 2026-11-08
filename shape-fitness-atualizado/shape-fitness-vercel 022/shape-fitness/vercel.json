@@ -1,0 +1,13 @@
+{
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }, { "source": "/robots.txt", "destination": "/api" }, { "source": "/sitemap.xml", "destination": "/api" }],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+      { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https://*.public.blob.vercel-storage.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com https://maps.google.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" } ] },
+    { "source": "/admin", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}

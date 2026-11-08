@@ -1,0 +1,9 @@
+{
+  "name": "shape-fitness",
+  "version": "2.0.0",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": { "start": "node local.js" },
+  "dependencies": { "@vercel/blob": "^0.27.0", "bcryptjs": "^2.4.3", "express": "^4.21.0", "pg": "^8.13.0" },
+  "devDependencies": { "pg-mem": "^3.0.5" }
+}
